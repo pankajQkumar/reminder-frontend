@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Reminder App</title>
+
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <style>
+      /* General body styles */
+      body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        height: 100%;
+        overflow-y: auto; /* Allow scrolling */
+      }
+
+      /* Background video styles */
+      .background-video {
+        position: fixed; /* Fixed positioning for background */
+        top: 0;
+        left: 0;
+        width: 100vw; /* Use viewport width */
+        height: 100vh; /* Use viewport height */
+        object-fit: cover; /* Ensures the video covers the full background */
+        z-index: -1; /* Keeps the video behind the content */
+      }
+
+      /* Main page layout styles */
+      .home-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 50px; /* Adds space for bottom content */
+      }
+
+      .header {
+        background-color: #0078D7;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+        width: 100%;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      .header p {
+        margin: 0.5rem 0 0;
+        font-size: 1.2rem;
+      }
+
+      .main-content {
+        flex: 1;
+        width: 90%;
+        max-width: 800px;
+        margin-top: 2rem;
+        text-align: center;
+        position: relative;
+      }
+
+      .main-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .add-reminder-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        background-color: #0078D7;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .add-reminder-button:hover {
+        background-color: #dad7df;
+      }
+
+      .reminder-list {
+        margin-top: 2rem;
+        padding: 1rem;
+        background: rgb(185, 189, 240);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .reminder-list p {
+        margin: 0;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background video element -->
+    <div class="background-video">
+      <video autoplay loop muted>
+        <source src="pankaj.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Main content -->
+    <div id="root">
+      <!-- React components will be rendered here -->
+    </div>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  </body>
+</html>
